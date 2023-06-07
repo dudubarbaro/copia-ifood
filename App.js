@@ -9,8 +9,8 @@ export default function App() {
     < Fragment>
       <StatusBar barStyle="dark-content" />
       <Routes />
-    </Fragment> >
-  );
+    </Fragment>
+  )
 }
 
 const styles = StyleSheet.create({
