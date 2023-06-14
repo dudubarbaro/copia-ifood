@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function Perfil() {
+export default function Pagamentos() {
     return (
         <View style={styles.container}>
-            <Text>Perfil</Text>
+            <Text>Pagamentos</Text>
         </View>
     );
 }
