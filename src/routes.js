@@ -5,12 +5,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialIcons } from '@expo/vector-icons';
 
+import Perfil from './screens/Perfil';
 import Home from './screens/Home';
 import Busca from './screens/Busca';
-import Perfil from './screens/Perfil';
 import Pedidos from './screens/Pedidos';
 import Carteira from './screens/Carteira';
-import Perfil from './screens/Perfil';
 import Pagamentos from './screens/Pagamentos';
 
 const BottomTab = createBottomTabNavigator();
