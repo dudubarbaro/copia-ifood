@@ -18,6 +18,22 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const PerfilStack = createStackNavigator();
 
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+const Tab = createMaterialTopTabNavigator();
+
+function PedidosRouter() {
+    return (
+        <Tab.Navigator>
+            <Tab.Screen name="Pedidos" component={Pedidos} />
+            <Tab.Screen
+                name="PedidosAnteriores"
+                component={PedidosAnteriores}
+                options={{ tabBarLabel: 'Pedidos Anteriores' }}
+            />
+        </Tab.Navigator>
+    );
+}
+
 function PerfilRoutes() {
     return (
         <PerfilStack.Navigator>
@@ -52,12 +68,15 @@ export default function Routes() {
                     ),
                 }}
                 />
-                < BottomTab.Screen name="Pedidos" component={Pedidos} options={{
-                    tabBarLabel: 'Pedidos',
-                    tabBarIcon: ({ color }) => (
-                        <MaterialIcons name="assigment" color={color} size={26} />
-                    ),
-                }}
+                <BottomTab.Screen
+                    name="Pedidos"
+                    component={PedidosRouter}
+                    options={{
+                        tabBarLabel: 'Pedidos',
+                        tabBarIcon: ({ color }) => (
+                            <MaterialIcons name="assignment" color={color} size={26} />
+                        ),
+                    }}
                 />
                 < BottomTab.Screen
                     name="PerfilRoutes"
