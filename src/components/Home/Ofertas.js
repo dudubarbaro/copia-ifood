@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import api from '../../services/api';
-import formatNumber from '../../helpers/formatNumber';
+import { formatNumber } from '../../helpers/formatNumber';
 
 export default function Ofertas({ navigation }) {
     const [ofertas, setOfertas] = useState([]);
@@ -49,8 +49,12 @@ export default function Ofertas({ navigation }) {
                 horizontal
                 style={styles.lista}
             >
-                {ofertas.map((oferta) => {
-                    <TouchableOpacity style={styles.item} key={oferta.id}>
+                {ofertas.map((oferta) => (
+                    <TouchableOpacity
+                        style={styles.item}
+                        key={oferta.id}
+                        onPress={() => navigation.navigate('Item', { item: oferta })}
+                    >
                         <Image source={{ uri: oferta.offer_url }} style={styles.imagem} />
                         <View style={styles.info}>
                             <Text numberOfLines={2} style={styles.titulo}>
@@ -62,8 +66,8 @@ export default function Ofertas({ navigation }) {
                                 <MaterialIcons name="local-offer" size={15} color="#000" />
                             </View>
                         </View>
-                    </TouchableOpacity>;
-                })}
+                    </TouchableOpacity>
+                ))}
             </ScrollView>
         </View>
     );

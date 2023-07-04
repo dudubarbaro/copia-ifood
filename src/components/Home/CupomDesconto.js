@@ -7,10 +7,6 @@ export default function CupomDesconto() {
         <TouchableOpacity style={styles.cupom}>
             <View style={styles.divisor}>
                 <View style={styles.conteudo}>
-                    <Image
-                        source={require('../../assets/discount-coupon.png')}
-                        style={styles.logo}
-                    />
                     <View style={styles.info}>
                         <Text style={styles.titulo}>Cupom de R$10</Text>
                         <Text style={styles.validade}>Válido até as 17:30</Text>
